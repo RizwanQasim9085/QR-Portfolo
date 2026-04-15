@@ -1,0 +1,293 @@
+/* 
+   Qaisar Roonjha Portfolio - Premium Styles
+   Theme: Visionary, Modern, Credible
+*/
+
+:root {
+    --bg: #050505;
+    --surface: #0F0F0F;
+    --accent: #E2B859;
+    --text-main: #FFFFFF;
+    --text-dim: #A0A0A0;
+    --border: rgba(255, 255, 255, 0.1);
+    --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-serif: 'Georgia', serif;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+}
+
+/* Layout Structure */
+.layout {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    grid-template-rows: 80px 1fr 60px;
+    height: 100vh;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+        overflow: visible;
+    }
+}
+
+/* Header */
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    z-index: 100;
+}
+
+header.scrolled {
+    background: rgba(5, 5, 5, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid var(--accent);
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Sidebars */
+.sidebar-left {
+    border-right: 1px solid var(--border);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow-y: auto;
+}
+
+.sidebar-right {
+    border-left: 1px solid var(--border);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow-y: auto;
+}
+
+@media (max-width: 1024px) {
+    .sidebar-left, .sidebar-right {
+        border: none;
+        border-bottom: 1px solid var(--border);
+        overflow-y: visible;
+    }
+}
+
+.section-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.about-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-dim);
+}
+
+/* Main Stage */
+.main-stage {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle at 50% 50%, #111 0%, transparent 70%);
+    overflow-y: auto;
+}
+
+#hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero-h1 {
+    font-family: var(--font-serif);
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--accent);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+/* Grids & Cards */
+.skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.skill-tag {
+    font-size: 11px;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    text-align: center;
+    color: var(--text-dim);
+}
+
+.projects-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .projects-strip {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+}
+
+.project-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.project-card p {
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+/* Impact Stats */
+.impact-stat {
+    margin-bottom: 25px;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--text-main);
+    display: block;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+}
+
+/* Buttons */
+.contact-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background: var(--accent);
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--border);
+    font-size: 10px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: var(--bg);
+}
+
+.glow-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
