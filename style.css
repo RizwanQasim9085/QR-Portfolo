@@ -4,12 +4,12 @@
 */
 
 :root {
-    --bg: #050505;
-    --surface: #0F0F0F;
-    --accent: #E2B859;
-    --text-main: #FFFFFF;
-    --text-dim: #A0A0A0;
-    --border: rgba(255, 255, 255, 0.1);
+    --bg: #e0f2fe; /* Light Sky Blue */
+    --surface: #f0f9ff; /* Very light Sky Blue */
+    --accent: #0369a1; /* Deep Sky Blue for contrast */
+    --text-main: #0c4a6e; /* Dark Blue for text */
+    --text-dim: #075985; /* Medium Blue for dimmed text */
+    --border: rgba(3, 105, 161, 0.1);
     --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-serif: 'Georgia', serif;
     --transition: all 0.3s ease;
@@ -60,7 +60,7 @@ header {
 }
 
 header.scrolled {
-    background: rgba(5, 5, 5, 0.9) !important;
+    background: rgba(224, 242, 254, 0.9) !important;
     backdrop-filter: blur(10px) !important;
     border-bottom: 1px solid var(--accent);
 }
@@ -141,7 +141,7 @@ nav a:hover {
     padding: 40px;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(circle at 50% 50%, #111 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, #bae6fd 0%, transparent 70%);
     overflow-y: auto;
 }
 
@@ -241,7 +241,7 @@ nav a:hover {
     width: 100%;
     padding: 15px;
     background: var(--accent);
-    color: #000;
+    color: #fff;
     text-align: center;
     text-decoration: none;
     font-weight: 700;
@@ -273,11 +273,11 @@ footer {
 .glow-dot {
     width: 8px;
     height: 8px;
-    background: var(--accent);
+    background: #0ea5e9;
     border-radius: 50%;
     display: inline-block;
     margin-right: 10px;
-    box-shadow: 0 0 10px var(--accent);
+    box-shadow: 0 0 10px #0ea5e9;
 }
 
 /* Reveal Animation */
